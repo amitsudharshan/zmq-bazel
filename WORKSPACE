@@ -44,3 +44,9 @@ http_archive(
    strip_prefix = "czmq-afc815eadb708ad34d9b01b88aa5f86528017f63",
    urls = ["https://github.com/zeromq/czmq/archive/afc815eadb708ad34d9b01b88aa5f86528017f63.zip"]
 )
+
+git_repository(
+	name="zmq-bazel",
+	commit = "6d50b921567f443f785b816a8d687aad1fd74e2d",
+	remote = "https://github.com/amitsudharshan/zmq-bazel"
+)

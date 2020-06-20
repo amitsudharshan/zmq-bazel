@@ -26,6 +26,7 @@ mac_cache_entries = {
         "LIBZMQ_LIBRARIES": "$EXT_BUILD_DEPS/zeromq_build/lib",
 	"LIBZMQ_INCLUDE_DIRS": "$EXT_BUILD_DEPS/zeromq_build/include",
         "CMAKE_MACOSX_RPATH": "True",
+	"ENABLE_DRAFTS": "True",
 }
 
 czmq_select = select( {
