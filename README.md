@@ -1,0 +1,1 @@
+This repository contains a bazel recipe for using zeromq on mac and linux, specifically building libzmq and cmzq. I found it incredibly tedious to work through the details to get it to compile, and so hopefully this of some use. It may also help you as you try and build other foreign dependencies in bazel.
