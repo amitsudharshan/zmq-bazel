@@ -1,5 +1,6 @@
-workspace(name = "rules_foreign_cc_usage_example")
+workspace(name = "zmq")
 
+load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 # Group the sources of the library so that CMake rule have access to it
@@ -37,10 +38,8 @@ http_archive(
    strip_prefix = "zeromq-4.3.2",
    urls = ["https://github.com/zeromq/libzmq/releases/download/v4.3.2/zeromq-4.3.2.tar.gz"],
 )
-# libzmq source code repository
-http_archive(
-   name = "czmq",
-   build_file_content = all_content,
-   strip_prefix = "czmq-4.2.0",
-   urls = ["https://github.com/zeromq/czmq/releases/download/v4.2.0/czmq-4.2.0.tar.gz"]
+git_repository(
+	name="czmq",
+	commit = "afc815eadb708ad34d9b01b88aa5f86528017f63",
+	remote = "https://github.com/zeromq/czmq"
 )
