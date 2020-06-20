@@ -31,15 +31,16 @@ load("@rules_foreign_cc//:workspace_definitions.bzl", "rules_foreign_cc_dependen
 #      The default is True.
 rules_foreign_cc_dependencies()
 
-# libzmq source code repository
 http_archive(
    name = "zeromq",
    build_file_content = all_content,
-   strip_prefix = "zeromq-4.3.2",
-   urls = ["https://github.com/zeromq/libzmq/releases/download/v4.3.2/zeromq-4.3.2.tar.gz"],
+   strip_prefix = "libzmq-d0d23446f5797364c885c7fdc982e5a1efe616fa",
+   urls = ["https://github.com/zeromq/libzmq/archive/d0d23446f5797364c885c7fdc982e5a1efe616fa.zip"],
 )
-git_repository(
-	name="czmq",
-	commit = "afc815eadb708ad34d9b01b88aa5f86528017f63",
-	remote = "https://github.com/zeromq/czmq"
+# libzmq source code repository
+http_archive(
+   name = "czmq",
+   build_file_content = all_content,
+   strip_prefix = "czmq-afc815eadb708ad34d9b01b88aa5f86528017f63",
+   urls = ["https://github.com/zeromq/czmq/archive/afc815eadb708ad34d9b01b88aa5f86528017f63.zip"]
 )
