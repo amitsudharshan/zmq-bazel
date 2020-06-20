@@ -14,7 +14,7 @@ shared_libraries = select({
 "@bazel_tools//src/conditions:linux_x86_64": ["libzmq.so.5"],
 "@bazel_tools//src/conditions:darwin" : ["libzmq.5.dylib"],
 }),
-visibility = ["//:__public__"],
+ visibility = ["//visibility:public"],
 )
 
 linux_cache_entries = {
@@ -45,7 +45,7 @@ cmake_external(
 
    lib_source = "@czmq//:all",
    deps=["zeromq_build"],
-	visibility = ["//:__public__"],
+ visibility = ["//visibility:public"],
 )
 
 cc_binary(
