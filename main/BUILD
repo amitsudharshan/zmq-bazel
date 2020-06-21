@@ -8,6 +8,7 @@ cmake_external(
    cache_entries = {
        "NOFORTRAN": "on",
        "BUILD_WITHOUT_LAPACK": "no",
+	"ENABLE_DRAFTS": "True",
    },
    lib_source = "@zeromq//:all",
 shared_libraries = select({
@@ -20,6 +21,7 @@ shared_libraries = select({
 linux_cache_entries = {
         "LIBZMQ_LIBRARIES": "$EXT_BUILD_DEPS/zeromq_build/lib/libzmq.so.5", 
 	"LIBZMQ_INCLUDE_DIRS": "$EXT_BUILD_DEPS/zeromq_build/include",
+	"ENABLE_DRAFTS": "True",
 }
 
 mac_cache_entries = {
