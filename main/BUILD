@@ -9,7 +9,7 @@ cmake_external(
        "NOFORTRAN": "on",
        "BUILD_WITHOUT_LAPACK": "no",
 	"ENABLE_DRAFTS": "True",
-	"CXXFLAGS": ["-D ZMQ_BUILD_DRAFT_API"],
+	"CXXFLAGS": "-D ZMQ_BUILD_DRAFT_API",
    },
    lib_source = "@zeromq//:all",
 shared_libraries = select({
